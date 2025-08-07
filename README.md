@@ -1,4 +1,4 @@
-# PersonalFinanceTracker
+# Personal Finance Tracker
 A comprehensive Personal Finance Tracker web application that allows multiple users to efficiently manage and visualize their finances.
 
 # Key Features:
