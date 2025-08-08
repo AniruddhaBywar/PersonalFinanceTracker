@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@CrossOrigin(origins = "http://localhost:3000")
 @RestController
 @RequestMapping("/api/users")
 @RequiredArgsConstructor
@@ -17,7 +18,7 @@ public class UserController {
 
     private final UserService userService;
 
-    @PostMapping
+    @PostMapping("/add")
     public ResponseEntity<UserRespDTO> createUser(@RequestBody @Valid UserReqDTO dto) {
         return ResponseEntity.ok(userService.createUser(dto));
     }
@@ -38,7 +39,7 @@ public class UserController {
         return ResponseEntity.ok("User deleted successfully");
     }
 
-    @GetMapping
+    @GetMapping("/list")
     public ResponseEntity<List<UserRespDTO>> getAllUsers() {
         return ResponseEntity.ok(userService.getAllUsers());
     }
