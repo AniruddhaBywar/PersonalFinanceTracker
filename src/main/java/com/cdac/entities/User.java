@@ -9,13 +9,24 @@ import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+<<<<<<< HEAD
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
+=======
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+
+@Entity
+@Table(name = "users")
+>>>>>>> cf83aff6a78db13d4b57b430b69755b3012088e5
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
+<<<<<<< HEAD
 @ToString(callSuper = true, exclude = "password")
 @Entity
 @Table(name = "users")
@@ -23,6 +34,18 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long userId;
+=======
+@Getter
+@Setter
+
+@ToString(callSuper = true, exclude = { "password" })
+public class User {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long userId;
+
+>>>>>>> cf83aff6a78db13d4b57b430b69755b3012088e5
 
     @Column(nullable = false)
     private String name;
@@ -32,4 +55,8 @@ public class User {
 
     @Column(nullable = false)
     private String password;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> cf83aff6a78db13d4b57b430b69755b3012088e5

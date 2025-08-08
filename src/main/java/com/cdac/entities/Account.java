@@ -38,7 +38,11 @@ public class Account {
     private AccountType type;
 
 
+<<<<<<< HEAD
     @ManyToOne(fetch = FetchType.EAGER)
+=======
+    @ManyToOne(fetch = FetchType.LAZY)
+>>>>>>> cf83aff6a78db13d4b57b430b69755b3012088e5
     @JoinColumn(name = "user_id", nullable = false)
     private User user;
 }
