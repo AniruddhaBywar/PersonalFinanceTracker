@@ -10,10 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-<<<<<<< HEAD
 @CrossOrigin(origins = "http://localhost:3000")
-=======
->>>>>>> cf83aff6a78db13d4b57b430b69755b3012088e5
 @RestController
 @RequestMapping("/api/users")
 @RequiredArgsConstructor
@@ -21,11 +18,7 @@ public class UserController {
 
     private final UserService userService;
 
-<<<<<<< HEAD
     @PostMapping("/add")
-=======
-    @PostMapping
->>>>>>> cf83aff6a78db13d4b57b430b69755b3012088e5
     public ResponseEntity<UserRespDTO> createUser(@RequestBody @Valid UserReqDTO dto) {
         return ResponseEntity.ok(userService.createUser(dto));
     }
@@ -46,11 +39,7 @@ public class UserController {
         return ResponseEntity.ok("User deleted successfully");
     }
 
-<<<<<<< HEAD
     @GetMapping("/list")
-=======
-    @GetMapping
->>>>>>> cf83aff6a78db13d4b57b430b69755b3012088e5
     public ResponseEntity<List<UserRespDTO>> getAllUsers() {
         return ResponseEntity.ok(userService.getAllUsers());
     }
